@@ -1,0 +1,14 @@
+apiVersion: helm.toolkit.fluxcd.io/v2beta1
+kind: HelmRelease
+metadata:
+  name: nginx-ingress
+  namespace: kube-system
+spec:
+  values:
+    # Enable https on the actual GCP loadbalancer
+    enableHttps: true
+    annotations:
+      # Right now I hadn't planned for per cluster overrides, need to think this through, I don't want every single
+      # customer represented as a cluster in this world, that would suck.  We could just patch the resource once it's
+      # created, I suppose, unless there's a better way to do it here.
+      #kubernetes.io/ingress.global-static-ip-name: '<%= cluster_context %>' # name of external IP address resource
