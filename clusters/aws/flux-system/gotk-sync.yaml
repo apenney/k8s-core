@@ -8,8 +8,6 @@ spec:
   interval: 1m0s
   ref:
     branch: "1.18"
-  secretRef:
-    name: flux-system
   url: https://github.com/apenney/k8s-core.git
 ---
 apiVersion: kustomize.toolkit.fluxcd.io/v1beta2
