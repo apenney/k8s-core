@@ -6,4 +6,4 @@ metadata:
 spec:
   values:
     autoDiscovery:
-      clusterName: $(CLUSTER_NAME)
+      clusterName: "${cluster_name}"

@@ -11,3 +11,7 @@ spec:
   path: ./cloud/aws
   prune: true
   validation: server
+  postBuild:
+    substituteFrom:
+      - kind: ConfigMap
+        name: release
