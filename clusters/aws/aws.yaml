@@ -12,6 +12,8 @@ spec:
   prune: true
   validation: server
   postBuild:
+    substitute:
+      var_substitution_enabled: "true"
     substituteFrom:
       - kind: ConfigMap
         name: release
