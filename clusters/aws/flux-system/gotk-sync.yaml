@@ -10,7 +10,7 @@ spec:
     branch: "1.18"
   secretRef:
     name: flux-system
-  url: ssh://git@github.com/apenney/k8s-core
+  url: https://github.com/apenney/k8s-core.git
 ---
 apiVersion: kustomize.toolkit.fluxcd.io/v1beta2
 kind: Kustomization
